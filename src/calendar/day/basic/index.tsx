@@ -39,7 +39,7 @@ export default class BasicDay extends Component<BasicDayProps> {
   static displayName = 'IGNORE';
 
   static propTypes = {
-    state: PropTypes.oneOf(['selected', 'disabled', 'inactive', 'today', '']),
+    state: PropTypes.oneOf(['selected', 'disabled', 'inactive', 'today', 'saturday', 'sunday', '']),
     /** The marking object */
     marking: PropTypes.any,
     /** Date marking style [simple/period/multi-dot/multi-period]. Default = 'simple' */
