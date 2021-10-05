@@ -116,6 +116,13 @@ export default class BasicDay extends Component<BasicDayProps> {
     return this.props.state === 'today';
   }
 
+  isSaturday() {
+      return this.props.state === 'saturday';
+  }
+  isSunday() {
+      return this.props.state === 'sunday';
+  }
+
   isMultiDot() {
     return this.props.markingType === Marking.markingTypes.MULTI_DOT;
   }
@@ -167,6 +174,11 @@ export default class BasicDay extends Component<BasicDayProps> {
       style.push(this.style.todayText);
     } else if (this.isInactive()) {
       style.push(this.style.inactiveText);
+    }else if (this.isSaturday()) {
+        style.push(this.style.saturdayText);
+    } 
+    else if (this.isSunday()) {
+        style.push(this.style.sundayText);
     }
 
     //Custom marking type
