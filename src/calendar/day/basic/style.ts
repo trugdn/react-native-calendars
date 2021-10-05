@@ -67,6 +67,12 @@ export default function styleConstructor(theme: Theme = {}) {
     todayDot: {
       backgroundColor: appStyle.todayDotColor || appStyle.dotColor
     },
+    saturdayText: {
+        color: appStyle.textSaturdayColor
+    },
+    sundayText: {
+        color: appStyle.textSundayColor
+    },
     ...(theme.stylesheet?.day?.basic || {})
   });
 }
